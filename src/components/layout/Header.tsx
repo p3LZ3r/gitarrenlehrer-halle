@@ -1,31 +1,59 @@
-import * as React from 'react';
+import Link from 'next/link';
 
-import UnstyledLink from '@/components/links/UnstyledLink';
+import NextImage from '@/components/NextImage';
 
-const links = [
-  { href: '/', label: 'Route 1' },
-  { href: '/', label: 'Route 2' },
+const navigation = [
+  { name: 'Über mich', href: '/ueber-mich' },
+  { name: 'Unterricht', href: '/unterricht' },
+  { name: 'Referenzen', href: '/referenzen' },
+  { name: 'Preise', href: '/preise' },
 ];
 
 export default function Header() {
   return (
-    <header className='sticky top-0 z-50 bg-white'>
-      <div className='layout flex h-14 items-center justify-between'>
-        <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
-          Home
-        </UnstyledLink>
-        <nav>
-          <ul className='flex items-center justify-between space-x-4'>
-            {links.map(({ href, label }) => (
-              <li key={`${href}${label}`}>
-                <UnstyledLink href={href} className='hover:text-gray-600'>
-                  {label}
-                </UnstyledLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+    <header className='bg-primary-600'>
+      <nav className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8' aria-label='Top'>
+        <div className='flex w-full items-center justify-between border-b border-primary-500 py-6 lg:border-none'>
+          <div className='flex items-center'>
+            <Link href='/'>
+              <a>
+                <span className='sr-only'>Workflow</span>
+                <NextImage
+                  useSkeleton
+                  src='/images/new-tab.png'
+                  width='20'
+                  height='20'
+                  alt='Gitarrenlehrer Halle - Steven Lawrenz'
+                  className='h-10 w-auto'
+                />
+              </a>
+            </Link>
+            <div className='ml-10 hidden space-x-8 lg:block'>
+              {navigation.map((link) => (
+                <Link href={link.href} key={link.name}>
+                  <a className='text-base font-medium text-white hover:text-primary-50'>
+                    {link.name}
+                  </a>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className='ml-10 space-x-4'>
+            <a className='inline-block rounded-md border border-transparent bg-white py-2 px-4 text-base font-medium text-primary-600 hover:bg-primary-50'>
+              Kontakt aufnehmen
+            </a>
+          </div>
+        </div>
+        <div className='flex flex-wrap justify-center space-x-6 py-4 lg:hidden'>
+          {navigation.map((link) => (
+            <Link href={link.href} key={link.name}>
+              <a className='text-base font-medium text-white hover:text-primary-50'>
+                {link.name}
+              </a>
+            </Link>
+          ))}
+        </div>
+      </nav>
     </header>
   );
 }
