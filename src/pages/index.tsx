@@ -1,6 +1,9 @@
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
+import AboutMe from '@/components/sections/about-me';
+import Pricing from '@/components/sections/pricing';
+import References from '@/components/sections/references';
 import Seo from '@/components/Seo';
 
 /**
@@ -55,6 +58,9 @@ export default function HomePage() {
           </div>
         </div>
       </main>
+      <AboutMe />
+      <References />
+      <Pricing />
     </Layout>
   );
 }
