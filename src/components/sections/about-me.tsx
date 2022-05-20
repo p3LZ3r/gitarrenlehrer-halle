@@ -1,4 +1,3 @@
-import { CameraIcon } from '@heroicons/react/solid';
 import * as React from 'react';
 
 import NextImage from '../NextImage';
@@ -11,10 +10,10 @@ export default function AboutMe() {
         <div className='mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8'>
           <div>
             <h2 className='text-base font-semibold uppercase tracking-wide text-primary-600'>
-              Case Study
+              Über mich
             </h2>
             <h3 className='mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl'>
-              Meet Whitney
+              Steven Lawrenz
             </h3>
           </div>
         </div>
@@ -22,110 +21,72 @@ export default function AboutMe() {
           <div className='relative lg:col-start-2 lg:row-start-1'>
             <svg
               className='absolute top-0 right-0 -mt-20 -mr-20 hidden lg:block'
-              width={404}
-              height={384}
-              fill='none'
-              viewBox='0 0 404 384'
+              width={400}
+              height={400}
               aria-hidden='true'
             >
-              <defs>
-                <pattern
-                  id='de316486-4a29-4312-bdfc-fbce2132a2c1'
-                  x={0}
-                  y={0}
-                  width={20}
-                  height={20}
-                  patternUnits='userSpaceOnUse'
-                >
-                  <rect
-                    x={0}
-                    y={0}
-                    width={4}
-                    height={4}
-                    className='text-gray-200'
-                    fill='currentColor'
-                  />
-                </pattern>
-              </defs>
+              <pattern
+                id='pattern-piano'
+                x={0}
+                y={0}
+                width={70}
+                height={46}
+                patternUnits='userSpaceOnUse'
+              >
+                <g id='piano' className='fill-gray-300'>
+                  <polygon points='68 44 62 44 62 46 56 46 56 44 52 44 52 46 46 46 46 44 40 44 40 46 38 46 38 44 32 44 32 46 26 46 26 44 22 44 22 46 16 46 16 44 12 44 12 46 6 46 6 44 0 44 0 42 8 42 8 28 6 28 6 0 12 0 12 28 10 28 10 42 18 42 18 28 16 28 16 0 22 0 22 28 20 28 20 42 28 42 28 28 26 28 26 0 32 0 32 28 30 28 30 42 38 42 38 0 40 0 40 42 48 42 48 28 46 28 46 0 52 0 52 28 50 28 50 42 58 42 58 28 56 28 56 0 62 0 62 28 60 28 60 42 68 42 68 0 70 0 70 46 68 46' />
+                </g>
+              </pattern>
               <rect
-                width={404}
-                height={384}
-                fill='url(#de316486-4a29-4312-bdfc-fbce2132a2c1)'
-              />
+                x='0'
+                y='0'
+                width='100%'
+                height='100%'
+                fill='url(#pattern-piano)'
+              ></rect>
             </svg>
             <div className='relative mx-auto max-w-prose text-base lg:max-w-none'>
               <figure>
-                <div className='aspect-w-12 aspect-h-7 lg:aspect-none'>
+                <div className='aspect-w-3 aspect-h-2 lg:aspect-none'>
                   <NextImage
                     useSkeleton
-                    src='https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80'
-                    width='1184'
-                    height='1376'
-                    alt='Whitney leaning against a railing on a downtown street'
+                    src='/images/Gitarrenlehrer Halle - Unterrichtssituation zu zweit.jpeg'
+                    width='3000'
+                    height='2000'
+                    alt='Gitarrenlehrer Halle - Unterrichtssituation'
                     className='rounded-lg object-cover object-center shadow-lg'
                   />
                 </div>
-                <figcaption className='mt-3 flex text-sm text-gray-500'>
-                  <CameraIcon
-                    className='h-5 w-5 flex-none text-gray-400'
-                    aria-hidden='true'
-                  />
-                  <span className='ml-2'>Photograph by Marcus O’Leary</span>
-                </figcaption>
               </figure>
             </div>
           </div>
           <div className='mt-8 lg:mt-0'>
-            <div className='mx-auto max-w-prose text-base lg:max-w-none'>
+            <div className='prose-primary prose mx-auto max-w-prose text-base lg:max-w-none'>
               <p className='text-lg text-gray-500'>
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
+                Seit meiner frühesten Jugend spiele ich Gitarre und war in
+                verschiedenen Bands aktiv. Neben meinem Abitur machte ich eine
+                studienvorbereitende Ausbildung in den Fächern Gitarre, Klavier,
+                Musiktheorie und Gehörbildung.
+              </p>
+              <p className='text-lg text-gray-500'>
+                Anschließend studierte ich an der Martin-Luther-Universität
+                Halle-Wittenberg Musikwissenschaften und Kunstgeschichte, wo ich
+                mit meiner Arbeit „Die Rolle und Entwicklung der (E-)Gitarre in
+                der Popularmusik des 20. & 21. Jahrhunderts“ meinen Abschluss
+                machte. Anschließend machte ich als Gitarrenlehrer und
+                freiberuflicher Musiker mein Hobby zum Beruf.
               </p>
             </div>
             <div className='prose-primary prose mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none'>
-              <p>
-                Sollicitudin tristique eros erat odio sed vitae, consequat
-                turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-                eu viverra donec ut volutpat donec laoreet quam urna.
-              </p>
-              <p>
-                Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique
-                sit nisi lorem pulvinar. Urna, laoreet fusce nibh leo. Dictum et
-                et et sit. Faucibus sed non gravida lectus dignissim imperdiet
-                a.
-              </p>
-              <p>
-                Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem
-                arcu, metus, egestas netus cursus. In.
-              </p>
+              <h3>Unterricht</h3>
+              <p>Individueller Musikunterricht für alle Altersgruppen in...</p>
               <ul role='list'>
-                <li>Quis elit egestas venenatis mattis dignissim.</li>
+                <li>allen Stilrichtungen (Pop/Rock/Jazz/Klassik)</li>
                 <li>
-                  Cras cras lobortis vitae vivamus ultricies facilisis tempus.
+                  Musiktheorie, Gehörbildung und Vorbereitung eines Studiums
                 </li>
-                <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
+                <li>Komposition, Songwriting und Recording</li>
               </ul>
-              <p>
-                Rhoncus nisl, libero egestas diam fermentum dui. At quis
-                tincidunt vel ultricies. Vulputate aliquet velit faucibus
-                semper. Pellentesque in venenatis vestibulum consectetur nibh
-                id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
-                fermentum lacus in. Viverra.
-              </p>
-              <h3>How we helped</h3>
-              <p>
-                Tincidunt integer commodo, cursus etiam aliquam neque, et.
-                Consectetur pretium in volutpat, diam. Montes, magna cursus
-                nulla feugiat dignissim id lobortis amet. Laoreet sem est
-                phasellus eu proin massa, lectus. Diam rutrum posuere donec
-                ultricies non morbi. Mi a platea auctor mi.
-              </p>
-              <p>
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
-              </p>
             </div>
           </div>
         </div>
