@@ -1,47 +1,52 @@
 import { CheckCircleIcon } from '@heroicons/react/solid';
 import * as React from 'react';
 
+import NextImage from '../NextImage';
+
 const includedFeatures = [
-  'Private forum access',
-  'Member resources',
-  'Entry to annual conference',
-  'Official member t-shirt',
+  'Keine Mindesvertragslaufzeit',
+  'ganzjähriger Unterricht, auch während der Ferien',
+  'individuelle Unterrichtszeiten, bei Bedarf wöchentlich abgestimmt',
+  'Unterricht auch über Webcam möglich (Skype, Zoom, etc.)',
+  'Eine Stunde Unterricht pro Woche',
 ];
 
 export default function Pricing() {
   return (
     <div className='bg-gray-100'>
-      <div className='pt-12 sm:pt-16 lg:pt-20'>
-        <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-          <div className='text-center'>
-            <h2 className='text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl'>
-              Simple no-tricks pricing
-            </h2>
-            <p className='mt-4 text-xl text-gray-600'>
-              If you&apos;re not satisfied, contact us within the first 14 days
-              and we&apos;ll send you a full refund.
-            </p>
-          </div>
+      <div className='mx-auto max-w-7xl md:grid md:grid-cols-2 md:px-6 lg:px-8'>
+        <div className='px-4 pt-12 sm:px-6 sm:text-right md:flex md:flex-col md:pt-16 md:pl-0 md:pr-10 lg:pr-16'>
+          <h2 className='text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl'>
+            Preise
+          </h2>
+          <p className='mt-4 text-xl text-gray-600'>
+            Bei Interesse an einer Zusammenarbeit melden Sie sich unverbindlich
+            und wir vereinbaren zeitnah einen Termin um alles Weitere zu
+            besprechen.
+          </p>
+        </div>
+        <div className='z-20 px-4 pt-12 sm:px-6 md:pt-16 md:pr-0 md:pl-10 lg:pl-16'>
+          {' '}
+          <NextImage
+            useSkeleton
+            src='/images/Gitarrenlehrer Halle - Effektgeraete.jpeg'
+            width='3000'
+            height='2000'
+            alt='Gitarrenlehrer Halle - Effektgeräte'
+            className='-mb-0 rounded-lg shadow-lg md:-mb-32 lg:block'
+          />
         </div>
       </div>
       <div className='mt-8 bg-white pb-16 sm:mt-12 sm:pb-20 lg:pb-28'>
         <div className='relative'>
-          <div className='absolute inset-0 h-1/2 bg-gray-100' />
-          <div className='relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <div className='mx-auto max-w-lg overflow-hidden rounded-lg shadow-lg lg:flex lg:max-w-none'>
+          <div className='absolute inset-0 z-10 h-1/2 bg-gray-100' />
+          <div className='relative z-30 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
+            <div className='mx-auto max-w-lg overflow-hidden rounded-lg shadow-2xl lg:flex lg:max-w-none'>
               <div className='flex-1 bg-white px-6 py-8 lg:p-12'>
-                <h3 className='text-2xl font-extrabold text-gray-900 sm:text-3xl'>
-                  Lifetime Membership
-                </h3>
-                <p className='mt-6 text-base text-gray-500'>
-                  Lorem ipsum dolor sit amet consect etur adipisicing elit.
-                  Itaque amet indis perferendis blanditiis repellendus etur
-                  quidem assumenda.
-                </p>
-                <div className='mt-8'>
+                <div>
                   <div className='flex items-center'>
                     <h4 className='flex-shrink-0 bg-white pr-4 text-sm font-semibold uppercase tracking-wider text-primary-600'>
-                      What&apos;s included
+                      Was ist inkludiert?
                     </h4>
                     <div className='flex-1 border-t-2 border-gray-200' />
                   </div>
@@ -71,10 +76,17 @@ export default function Pricing() {
                   Zahle monatlich, lerne für&apos;s Leben
                 </p>
                 <div className='mt-4 flex items-center justify-center text-5xl font-extrabold text-gray-900'>
-                  <span>99,00 €</span>
+                  <span>99,00€</span>
                   <span className='ml-3 text-xl font-medium text-gray-500'>
                     EUR
                   </span>
+                </div>
+                <div className='mt-4 text-sm'>
+                  <p className='font-medium text-gray-900'>
+                    Spare <span className='font-bold'>10%</span> bei
+                    halbjährlicher und <span className='font-bold'>20%</span>
+                    bei jährlicher Zahlung
+                  </p>
                 </div>
                 <p className='mt-4 text-sm'>
                   <a href='#' className='font-medium text-gray-500 underline'>
