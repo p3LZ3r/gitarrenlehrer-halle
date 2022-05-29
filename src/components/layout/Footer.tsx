@@ -50,7 +50,7 @@ export default function Footer() {
             </div>
           ))}
         </nav>
-        <div className='mt-8 flex justify-center space-x-6'>
+        {/* <div className='mt-8 flex justify-center space-x-6'>
           {navigation.social.map((item) => (
             <Link href={item.href} key={item.name}>
               <a className='text-gray-400 hover:text-gray-500'>
@@ -59,7 +59,7 @@ export default function Footer() {
               </a>
             </Link>
           ))}
-        </div>
+        </div> */}
         <p className='mt-8 text-center text-base text-gray-400'>
           &copy; {new Date().getFullYear()} - Alle Rechte vorbehalten.
         </p>

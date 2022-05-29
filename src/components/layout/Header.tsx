@@ -3,10 +3,10 @@ import Link from 'next/link';
 import NextImage from '@/components/NextImage';
 
 const navigation = [
-  { name: 'Über mich', href: '/ueber-mich' },
-  { name: 'Unterricht', href: '/unterricht' },
-  { name: 'Referenzen', href: '/referenzen' },
-  { name: 'Preise', href: '/preise' },
+  { name: 'Über mich', href: '/#ueber-mich' },
+  { name: 'Referenzen', href: '/#referenzen' },
+  { name: 'Preise', href: '/#preise' },
+  { name: 'Kontakt', href: '/#kontakt' },
 ];
 
 export default function Header() {
@@ -30,7 +30,7 @@ export default function Header() {
             </Link>
             <div className='ml-10 hidden space-x-8 lg:block'>
               {navigation.map((link) => (
-                <Link href={link.href} key={link.name}>
+                <Link href={link.href} key={link.name} scroll={false}>
                   <a className='text-base font-medium text-white hover:text-primary-50'>
                     {link.name}
                   </a>
@@ -39,7 +39,12 @@ export default function Header() {
             </div>
           </div>
           <div className='ml-10 space-x-4'>
-            <a className='inline-block rounded-md border border-transparent bg-white py-2 px-4 text-base font-medium text-primary-600 hover:bg-primary-50'>
+            <a
+              target='_blank'
+              href='mailto:steven.lawrenz@gmx.net'
+              className='inline-block rounded-md border border-transparent bg-white py-2 px-4 text-base font-medium text-primary-600 hover:bg-primary-50'
+              rel='noreferrer'
+            >
               Kontakt aufnehmen
             </a>
           </div>

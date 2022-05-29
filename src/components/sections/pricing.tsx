@@ -4,7 +4,6 @@ import * as React from 'react';
 import NextImage from '../NextImage';
 
 const includedFeatures = [
-  'Keine Mindesvertragslaufzeit',
   'ganzjähriger Unterricht, auch während der Ferien',
   'individuelle Unterrichtszeiten, bei Bedarf wöchentlich abgestimmt',
   'Unterricht auch über Webcam möglich (Skype, Zoom, etc.)',
@@ -13,10 +12,10 @@ const includedFeatures = [
 
 export default function Pricing() {
   return (
-    <div className='bg-gray-100'>
+    <section className='bg-gray-100' id='preise'>
       <div className='mx-auto max-w-7xl md:grid md:grid-cols-2 md:px-6 lg:px-8'>
         <div className='px-4 pt-12 sm:px-6 sm:text-right md:flex md:flex-col md:pt-16 md:pl-0 md:pr-10 lg:pr-16'>
-          <h2 className='text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl'>
+          <h2 className='text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl lg:text-5xl'>
             Preise
           </h2>
           <p className='mt-4 text-xl text-gray-600'>
@@ -89,15 +88,20 @@ export default function Pricing() {
                   </p>
                 </div>
                 <p className='mt-4 text-sm'>
-                  <a href='#' className='font-medium text-gray-500 underline'>
+                  <a
+                    href='/docs/Privatunterricht Vertrag.docx'
+                    className='font-medium text-gray-500 underline'
+                  >
                     Mustervertrag anschauen
                   </a>
                 </p>
                 <div className='mt-6'>
                   <div className='rounded-md shadow'>
                     <a
+                      target='_blank'
                       href='mailto:steven.lawrenz@gmx.net'
                       className='flex w-full items-center justify-center rounded-md border border-transparent bg-primary-600 px-8 py-3 text-base font-medium text-white hover:bg-primary-700 md:py-4 md:px-10 md:text-lg'
+                      rel='noreferrer'
                     >
                       Jetzt unverbindlich anfragen
                     </a>
@@ -108,6 +112,6 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

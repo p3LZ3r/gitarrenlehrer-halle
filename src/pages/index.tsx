@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
 import AboutMe from '@/components/sections/about-me';
+import Contact from '@/components/sections/contact';
 import Pricing from '@/components/sections/pricing';
 import References from '@/components/sections/references';
 import Seo from '@/components/Seo';
@@ -41,18 +42,12 @@ export default function HomePage() {
           <div className='mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start'>
             <div className='rounded-md shadow'>
               <a
+                target='_blank'
                 href='mailto:steven.lawrenz@gmx.net'
                 className='flex w-full items-center justify-center rounded-md border border-transparent bg-primary-600 px-8 py-3 text-base font-medium text-white hover:bg-primary-700 md:py-4 md:px-10 md:text-lg'
+                rel='noreferrer'
               >
                 Kontakt aufnehmen
-              </a>
-            </div>
-            <div className='mt-3 sm:mt-0 sm:ml-3'>
-              <a
-                href='#'
-                className='flex w-full items-center justify-center rounded-md border border-transparent bg-primary-100 px-8 py-3 text-base font-medium text-primary-700 hover:bg-primary-200 md:py-4 md:px-10 md:text-lg'
-              >
-                Live demo
               </a>
             </div>
           </div>
@@ -61,6 +56,7 @@ export default function HomePage() {
       <AboutMe />
       <References />
       <Pricing />
+      <Contact />
     </Layout>
   );
 }
