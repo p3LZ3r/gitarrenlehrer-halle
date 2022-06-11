@@ -70,7 +70,7 @@ export default function Contact() {
                     href='https://goo.gl/maps/JTCjamgKhSTyCyz77'
                     rel='noreferrer'
                   >
-                    Gosenstraße 24, 06114 Halle (Saale)
+                    Große Gosenstraße 24, 06114 Halle (Saale)
                   </a>
                 </div>
               </div>
