@@ -19,8 +19,6 @@ import Seo from '@/components/Seo';
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
-// ToDo: Free Trial und 99 EURO
-
 export default function HomePage() {
   return (
     <Layout>

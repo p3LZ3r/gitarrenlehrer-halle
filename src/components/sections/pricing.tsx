@@ -41,7 +41,7 @@ export default function Pricing() {
           <div className='absolute inset-0 z-10 h-1/2 bg-gray-100' />
           <div className='relative z-30 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
             <div className='mx-auto max-w-lg overflow-hidden rounded-lg shadow-2xl lg:flex lg:max-w-none'>
-              <div className='flex-1 bg-white px-6 py-8 lg:p-12'>
+              <div className='flex-1 bg-white px-6 py-8 lg:p-9'>
                 <div>
                   <div className='flex items-center'>
                     <h4 className='flex-shrink-0 bg-white pr-4 text-sm font-semibold uppercase tracking-wider text-primary-600'>
@@ -51,7 +51,7 @@ export default function Pricing() {
                   </div>
                   <ul
                     role='list'
-                    className='mt-8 space-y-5 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5 lg:space-y-0'
+                    className='mt-8 space-y-3 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:gap-y-3 lg:space-y-0'
                   >
                     {includedFeatures.map((feature) => (
                       <li
@@ -70,14 +70,14 @@ export default function Pricing() {
                   </ul>
                 </div>
               </div>
-              <div className='bg-gray-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12'>
+              <div className='bg-gray-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-9'>
                 <p className='text-lg font-medium leading-6 text-gray-900'>
                   Zahle monatlich, lerne für&apos;s Leben
                 </p>
                 <div className='mt-4 flex items-center justify-center text-5xl font-extrabold text-gray-900'>
                   <span>99,00€</span>
-                  <span className='ml-3 text-left text-lg font-medium text-gray-500'>
-                    EUR
+                  <span className='ml-3 text-left text-lg font-medium leading-5 text-gray-500'>
+                    4 Einheiten
                     <br />
                     pro Monat
                   </span>

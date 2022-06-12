@@ -55,6 +55,7 @@ export default function AboutMe() {
                     height='2000'
                     alt='Gitarrenlehrer Halle - Unterrichtssituation'
                     className='rounded-lg object-cover object-center shadow-lg'
+                    priority={true}
                   />
                 </div>
               </figure>

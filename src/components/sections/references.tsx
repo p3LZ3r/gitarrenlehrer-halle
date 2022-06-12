@@ -2,6 +2,20 @@ import * as React from 'react';
 
 import YoutubeEmbed from '../YouTubeEmbed';
 
+const bands = [
+  { name: 'All You Can Eat', genre: 'Modern Metal' },
+  { name: 'Arctic Island', genre: 'Modern Metal' },
+  { name: 'The Handshake Affair', genre: 'Modern Metal' },
+  { name: 'Blacktoothed', genre: 'Modern Rock' },
+  { name: 'Victorius', genre: 'Power Metal' },
+  { name: 'Schema F', genre: 'Unterhaltungsmusik' },
+  { name: 'SinnToniker', genre: 'Jazz/Deutsch-Pop' },
+  { name: 'BossAria', genre: 'Jazz/Bossa-Nova' },
+  { name: 'Bigband Bitterfeld-Wolfen', genre: 'Bigband' },
+  { name: 'Goou', genre: 'Jazz/Fusion' },
+  { name: 'Blue Bossa', genre: 'Jazz/Unterhaltungsmusik' },
+];
+
 export default function References() {
   return (
     <section className='bg-primary-800' id='referenzen'>
@@ -60,21 +74,53 @@ export default function References() {
           </div>
         </div>
       </div>
-      <div className='mx-auto max-w-7xl border-t-2 border-primary-900 sm:border-t-0 md:grid md:grid-cols-2 md:px-6 lg:px-8'>
-        <div className='px-4 pb-12 sm:px-6 md:flex md:flex-col md:border-r md:border-primary-900 md:pb-16 md:pl-0 md:pr-10 lg:pr-16'>
-          <h2 className='mt-6 text-xl font-extrabold leading-8 tracking-tight text-green-50 sm:text-right sm:text-2xl md:mt-2 lg:text-3xl'>
-            weitere Referenzen
-          </h2>
-        </div>
-        <div className='border-0 border-primary-900 px-4 pb-12 sm:px-6 md:border-l md:pb-16 md:pr-0 md:pl-10 lg:pl-16'>
-          <p className='text-base leading-8 text-green-100'>
-            All You Can Eat (Modern Metal); Arctic Island (Modern Metal); The
-            Handshake Affair (Modern Metal); Blacktoothed (Modern Rock);
-            Victorius (Powermetal); Schema F (Unterhaltungsmusik); SinnToniker
-            (Jazz/Deutsch-Pop); BossAria (Jazz/Bossa-Nova); Bigband
-            Bitterfeld-Wolfen; Goou (Jazz/Fusion); Blue Bossa
-            (Jazz/Unterhaltungsmusik);
-          </p>
+      <div className='mx-auto max-w-7xl border-t-2 border-primary-900 pb-12 sm:border-t-0 md:grid md:grid-cols-1 md:px-6 lg:px-8'>
+        <div className='px-4 sm:px-6 lg:px-8'>
+          <div className='sm:flex sm:items-center'>
+            <div className='sm:flex-auto'>
+              <h3 className='mt-6 text-xl font-extrabold leading-8 tracking-tight text-green-50 sm:text-2xl md:mt-2 lg:text-3xl'>
+                weitere Referenzen
+              </h3>
+            </div>
+          </div>
+          <div className='mt-8 flex flex-col'>
+            <div className='-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8'>
+              <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
+                <div className='overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg'>
+                  <table className='min-w-full divide-y divide-gray-300'>
+                    <thead className='bg-gray-50'>
+                      <tr>
+                        <th
+                          scope='col'
+                          className='py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6'
+                        >
+                          Band
+                        </th>
+                        <th
+                          scope='col'
+                          className='px-3 py-2 text-left text-sm font-semibold text-gray-900'
+                        >
+                          Genre
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className='divide-y divide-gray-200 bg-white'>
+                      {bands.map((band) => (
+                        <tr key={band.name}>
+                          <td className='whitespace-nowrap py-2 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6'>
+                            {band.name}
+                          </td>
+                          <td className='whitespace-nowrap px-3 py-2 text-sm text-gray-500'>
+                            {band.genre}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
