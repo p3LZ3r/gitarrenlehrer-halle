@@ -7,7 +7,7 @@ const includedFeatures = [
   'ganzjähriger Unterricht, auch während der Ferien',
   'individuelle Unterrichtszeiten, bei Bedarf wöchentlich abgestimmt',
   'Unterricht auch über Webcam möglich (Skype, Zoom, etc.)',
-  '45 Minuten Unterricht pro Woche, 4 Unterrichtseinheiten pro Monat',
+  '45 Minuten Unterricht pro Woche',
 ];
 
 export default function Pricing() {
@@ -77,8 +77,6 @@ export default function Pricing() {
                 <div className='mt-4 flex items-center justify-center text-5xl font-extrabold text-gray-900'>
                   <span>99,00€</span>
                   <span className='ml-3 text-left text-lg font-medium leading-5 text-gray-500'>
-                    4 Einheiten
-                    <br />
                     pro Monat
                   </span>
                 </div>

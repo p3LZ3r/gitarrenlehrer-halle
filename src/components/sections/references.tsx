@@ -11,7 +11,7 @@ const bands = [
   { name: 'Schema F', genre: 'Unterhaltungsmusik' },
   { name: 'SinnToniker', genre: 'Jazz/Deutsch-Pop' },
   { name: 'BossAria', genre: 'Jazz/Bossa-Nova' },
-  { name: 'Bigband Bitterfeld-Wolfen', genre: 'Bigband' },
+  { name: 'Bigband Bitterfeld-Wolfen', genre: 'Jazz' },
   { name: 'Goou', genre: 'Jazz/Fusion' },
   { name: 'Blue Bossa', genre: 'Jazz/Unterhaltungsmusik' },
 ];
@@ -59,7 +59,7 @@ export default function References() {
           <h3 className='mt-2 text-3xl font-extrabold leading-8 tracking-tight text-green-50 sm:text-4xl'>
             Goou
           </h3>
-          <p className='text-lg leading-8 text-green-300'>Instrumental Band</p>
+          <p className='text-lg leading-8 text-green-300'>Instrumental-Band</p>
           <div className='md:flex-shrink-0'>
             <YoutubeEmbed embedId='mog3Cvf4VnU' />
           </div>
@@ -74,7 +74,7 @@ export default function References() {
           </div>
         </div>
       </div>
-      <div className='mx-auto max-w-7xl border-t-2 border-primary-900 pb-12 sm:border-t-0 md:grid md:grid-cols-1 md:px-6 lg:px-8'>
+      <div className='mx-auto max-w-6xl border-t-2 border-primary-900 pb-12 sm:border-t-0 md:grid md:grid-cols-1 md:px-6 lg:px-8'>
         <div className='px-4 sm:px-6 lg:px-8'>
           <div className='sm:flex sm:items-center'>
             <div className='sm:flex-auto'>
