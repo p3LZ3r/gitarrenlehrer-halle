@@ -71,6 +71,9 @@ export default function Pricing() {
                 </div>
               </div>
               <div className='bg-gray-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-9'>
+                <p className='absolute top-0 -translate-y-1/2 transform rounded-full bg-primary-500 py-1.5 px-4 text-xs font-semibold uppercase tracking-wide text-white lg:left-3/4'>
+                  Keine Mindestvertragsdauer
+                </p>
                 <p className='text-lg font-medium leading-6 text-gray-900'>
                   Zahle monatlich, lerne für&apos;s Leben
                 </p>
@@ -83,7 +86,7 @@ export default function Pricing() {
                 <div className='mt-4 text-sm'>
                   <p className='font-medium text-gray-900'>
                     Spare <span className='font-bold'>10%</span> bei
-                    halbjährlicher und <span className='font-bold'>20%</span>
+                    halbjährlicher und <span className='font-bold'>20%</span>{' '}
                     bei jährlicher Zahlung auf den Monatspreis
                   </p>
                 </div>
