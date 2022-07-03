@@ -13,10 +13,10 @@ export default function Contact() {
               <div className='aspect-w-3 aspect-h-2 lg:aspect-none'>
                 <NextImage
                   useSkeleton
-                  src='/images/Gitarrenlehrer Halle - Unterrichtssituation.jpeg'
+                  src='/images/Gitarrenlehrer Halle - Steven Lawrenz.jpeg'
                   width='3000'
                   height='2000'
-                  alt='Gitarrenlehrer Halle - Unterrichtssituation'
+                  alt='Gitarrenlehrer Halle - Steven Lawrenz'
                   className='rounded-lg object-cover object-center shadow-lg'
                 />
               </div>
