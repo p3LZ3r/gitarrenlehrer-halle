@@ -35,7 +35,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className='ml-3 text-base text-gray-500'>
-                  <a target='_blank' href='tel:+491767890123' rel='noreferrer'>
+                  <a target='_blank' href='tel:+4915783024534' rel='noreferrer'>
                     +49 157 83024534
                   </a>
                 </div>
