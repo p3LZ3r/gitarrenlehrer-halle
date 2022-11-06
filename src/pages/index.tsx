@@ -52,9 +52,9 @@ export default function HomePage() {
         </div>
       </main>
       <AboutMe />
-      /*
+      {/*
       <Reviews />
-      */
+  */}
       <References />
       <Pricing />
       <Contact />
