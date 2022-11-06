@@ -37,9 +37,7 @@ export default function References() {
           <h3 className='mt-2 text-3xl font-extrabold leading-8 tracking-tight text-green-50 sm:text-4xl'>
             Victorius
           </h3>
-          <p className='text-lg leading-8 text-green-300'>
-            Power-Metal-Band aus Leipzig
-          </p>
+          <p className='text-lg leading-8 text-green-300'>Power-Metal-Band</p>
           <div className='md:flex-shrink-0'>
             <YoutubeEmbed embedId='TrW80XB3q_A' />
           </div>

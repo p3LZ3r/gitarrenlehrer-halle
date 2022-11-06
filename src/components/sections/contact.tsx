@@ -1,4 +1,4 @@
-import { HomeIcon, MailIcon, PhoneIcon } from '@heroicons/react/outline';
+import { HomeIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import * as React from 'react';
 
 import NextImage from '../NextImage';
@@ -42,7 +42,7 @@ export default function Contact() {
               </div>
               <div className='mt-6 flex'>
                 <div className='flex-shrink-0'>
-                  <MailIcon
+                  <EnvelopeIcon
                     className='h-6 w-6 text-gray-400'
                     aria-hidden='true'
                   />

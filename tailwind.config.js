@@ -54,6 +54,11 @@ module.exports = {
             backgroundPosition: '700px 0',
           },
         },
+        marquee: {
+          '100%': {
+            transform: 'translateY(-50%)',
+          },
+        },
       },
       animation: {
         flicker: 'flicker 3s linear infinite',

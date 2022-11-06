@@ -1,4 +1,4 @@
-import { CheckCircleIcon } from '@heroicons/react/solid';
+import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import * as React from 'react';
 
 import NextImage from '../NextImage';
@@ -78,7 +78,7 @@ export default function Pricing() {
                   Zahle monatlich, lerne für&apos;s Leben
                 </p>
                 <div className='mt-4 flex items-center justify-center text-5xl font-extrabold text-gray-900'>
-                  <span>99,00€</span>
+                  <span>75,00€</span>
                   <span className='ml-3 text-left text-lg font-medium leading-5 text-gray-500'>
                     pro Monat
                   </span>

@@ -32,11 +32,15 @@ export default function Header() {
             </UnstyledLink>
             <div className='ml-10 hidden space-x-8 lg:block'>
               {navigation.map((link) => (
-                <Link href={link.href} key={link.name} scroll={false}>
-                  <a className='text-base font-medium text-white hover:text-primary-50'>
-                    {link.name}
-                  </a>
-                </Link>
+                (<Link
+                  href={link.href}
+                  key={link.name}
+                  scroll={false}
+                  className='text-base font-medium text-white hover:text-primary-50'>
+
+                  {link.name}
+
+                </Link>)
               ))}
             </div>
           </div>
@@ -53,11 +57,14 @@ export default function Header() {
         </div>
         <div className='flex flex-wrap justify-center space-x-6 py-4 lg:hidden'>
           {navigation.map((link) => (
-            <Link href={link.href} key={link.name}>
-              <a className='text-base font-medium text-white hover:text-primary-50'>
-                {link.name}
-              </a>
-            </Link>
+            (<Link
+              href={link.href}
+              key={link.name}
+              className='text-base font-medium text-white hover:text-primary-50'>
+
+              {link.name}
+
+            </Link>)
           ))}
         </div>
       </nav>
