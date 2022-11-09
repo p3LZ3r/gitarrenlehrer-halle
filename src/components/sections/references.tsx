@@ -77,7 +77,7 @@ export default function References() {
           <div className='sm:flex sm:items-center'>
             <div className='sm:flex-auto'>
               <h3 className='mt-6 text-xl font-extrabold leading-8 tracking-tight text-green-50 sm:text-2xl md:mt-2 lg:text-3xl'>
-                weitere Referenzen
+                weitere Bands/musikalische Projekte
               </h3>
             </div>
           </div>

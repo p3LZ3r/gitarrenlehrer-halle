@@ -83,14 +83,14 @@ export default function Pricing() {
                     pro Monat
                   </span>
                 </div>
-                <div className='mt-4 text-sm'>
+                {/*<div className='mt-4 text-sm'>
                   <p className='font-medium text-gray-900'>
                     Spare <span className='font-bold'>10%</span> bei
                     halbjährlicher und <span className='font-bold'>20%</span>{' '}
                     bei jährlicher Zahlung auf den Monatspreis
                   </p>
                 </div>
-                {/* <p className='mt-4 text-sm'>
+                 <p className='mt-4 text-sm'>
                   <a
                     href='/docs/Privatunterricht Vertrag.docx'
                     className='font-medium text-gray-500 underline'
