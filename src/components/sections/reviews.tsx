@@ -2,10 +2,13 @@ import dynamic from 'next/dynamic';
 import { Suspense, useEffect, useState } from 'react';
 
 // Dynamischer Import des ReviewSliders
-const ReviewSlider = dynamic(() => import('@/components/ReviewSlider'), {
-  loading: () => <ReviewsPlaceholder />,
-  ssr: false, // Deaktiviere serverseitiges Rendering für diese Komponente
-});
+const ReviewSlider = dynamic(
+  () => import('@/components/ReviewSlider').then((mod) => mod.default),
+  {
+    loading: () => <ReviewsPlaceholder />,
+    ssr: false, // Deaktiviere serverseitiges Rendering für diese Komponente
+  }
+);
 
 // Einfacher Placeholder während des Ladens
 function ReviewsPlaceholder() {
