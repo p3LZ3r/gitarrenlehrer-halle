@@ -220,4 +220,8 @@ function ReviewSlider({ embedded = false }: ReviewSliderProps) {
   );
 }
 
-export default React.memo(ReviewSlider);
+// Export the component directly for dynamic imports
+export default ReviewSlider;
+
+// Also export a memoized version if needed elsewhere
+export const MemoizedReviewSlider = React.memo(ReviewSlider);
