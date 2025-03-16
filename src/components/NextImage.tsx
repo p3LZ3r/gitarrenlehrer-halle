@@ -9,6 +9,8 @@ type NextImageProps = {
   blurClassName?: string;
   alt: string;
   width: string | number;
+  priority?: boolean;
+  quality?: number;
 } & (
   | { width: string | number; height: string | number }
   | { layout: 'fill'; width?: string | number; height?: string | number }
@@ -20,7 +22,7 @@ type NextImageProps = {
  * @description Must set width using `w-` className
  * @param useSkeleton add background with pulse animation, don't use it if image is transparent
  */
-export default function NextImage({
+function NextImage({
   useSkeleton = false,
   src,
   width,
@@ -29,6 +31,8 @@ export default function NextImage({
   className,
   imgClassName,
   blurClassName,
+  priority = false,
+  quality = 85,
   ...rest
 }: NextImageProps) {
   const [status, setStatus] = React.useState(
@@ -51,9 +55,13 @@ export default function NextImage({
         height={height}
         alt={alt}
         onLoadingComplete={() => setStatus('complete')}
-        /*layout='responsive'*/
+        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+        loading={priority ? 'eager' : 'lazy'}
+        quality={quality}
         {...rest}
       />
     </figure>
   );
 }
+
+export default React.memo(NextImage);

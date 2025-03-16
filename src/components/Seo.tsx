@@ -5,16 +5,18 @@ import { openGraph } from '@/lib/helper';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Gitarrenlehrer Halle - Steven Lawrenz',
-  siteName: 'Gitarrenlehrer Halle - Steven Lawrenz',
+  title: 'Gitarrenunterricht Halle - Gitarrenlehrer Steven Lawrenz',
+  siteName: 'Gitarrenunterricht Halle - Steven Lawrenz',
   description:
-    'Gitarrenlehrer Steven Lawrenz aus Halle lehrt mit Leidenschaft und Kompetenz Jedem das Gitarre spielen.',
+    'Professioneller Gitarrenunterricht in Halle (Saale) für Anfänger und Fortgeschrittene. Individueller Unterricht für E-Gitarre und Akustikgitarre in zentraler Lage. ✓ Flexible Zeiten ✓ Alle Altersgruppen ✓ Moderne Lehrmethoden',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://gitarrenlehrer-halle.de',
   type: 'website',
   robots: 'follow, index',
   /** No need to be filled, will be populated with openGraph function */
   image: '',
+  keywords:
+    'Gitarrenunterricht Halle, Gitarrenlehrer Halle, Gitarre lernen Halle, E-Gitarre Unterricht Halle, Akustikgitarre Unterricht Halle, Steven Lawrenz, Musikunterricht Halle',
 };
 
 type SeoProps = {
@@ -45,6 +47,7 @@ export default function Seo(props: SeoProps) {
       <title>{meta.title}</title>
       <meta name='robots' content={meta.robots} />
       <meta content={meta.description} name='description' />
+      <meta name='keywords' content={meta.keywords} />
       <meta property='og:url' content={`${meta.url}${router.asPath}`} />
       <link rel='canonical' href={`${meta.url}${router.asPath}`} />
       {/* Open Graph */}

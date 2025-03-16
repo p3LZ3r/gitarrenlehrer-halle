@@ -14,7 +14,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='en'>
+      <Html lang='de'>
         <Head>
           <link
             rel='preload'
@@ -22,6 +22,17 @@ class MyDocument extends Document {
             as='font'
             type='font/woff2'
             crossOrigin='anonymous'
+          />
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
+          <link
+            rel='preconnect'
+            href='https://fonts.gstatic.com'
+            crossOrigin='anonymous'
+          />
+          <meta name='theme-color' content='#ffffff' />
+          <meta
+            httpEquiv='Content-Security-Policy'
+            content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com;"
           />
         </Head>
         <body>

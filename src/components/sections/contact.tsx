@@ -1,4 +1,4 @@
-import { HomeIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
+import { EnvelopeIcon, HomeIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import * as React from 'react';
 
 import NextImage from '../NextImage';
@@ -6,11 +6,11 @@ import NextImage from '../NextImage';
 export default function Contact() {
   return (
     <section className='bg-white' id='kontakt'>
-      <div className='mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8'>
+      <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8'>
         <div className='mx-auto max-w-lg md:grid md:max-w-none md:grid-cols-2 md:gap-8'>
           <div>
             <figure>
-              <div className='aspect-w-3 aspect-h-2 lg:aspect-none'>
+              <div className='aspect-h-2 aspect-w-3 lg:aspect-none'>
                 <NextImage
                   useSkeleton
                   src='/images/Gitarrenlehrer Halle - Steven Lawrenz.jpeg'
