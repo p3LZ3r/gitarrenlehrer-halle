@@ -13,7 +13,6 @@ module.exports = {
   reactStrictMode: true,
 
   // Performance-Optimierungen
-  swcMinify: true, // Verwende SWC-Minifier für schnellere Builds
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production', // Entferne console.log im Produktionsmodus
   },
