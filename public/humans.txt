@@ -1,0 +1,70 @@
+# Humans.txt - The humans responsible & technology behind gitarrenlehrer-halle.de
+
+## TEAM ##
+
+Guitar Teacher & Founder: Steven Lawrenz
+Site: Halle (Saale), Germany
+Email: steven.lawrenz[at]gmx.net
+Phone: +49 157 83024534
+From: Halle (Saale), Germany
+
+## BUSINESS INFO ##
+
+Business Name: Gitarrenunterricht Halle - Steven Lawrenz
+Location: Große Gosenstraße 24, 06114 Halle (Saale), Germany
+Services: Guitar Lessons, Music Theory, E-Guitar, Acoustic Guitar
+Founded: Professional guitar teacher with university education
+Qualifications: Martin-Luther-Universität Halle-Wittenberg (Musikwissenschaften)
+Google Rating: 5.0 stars from 13+ reviews
+
+## WEBSITE INFO ##
+
+Last Updated: 2024
+Languages: German (primary)
+Doctype: HTML5
+Technology: Next.js, React, TypeScript, Tailwind CSS
+Hosting: Vercel
+Domain: gitarrenlehrer-halle.de
+
+## SEO KEYWORDS ##
+
+Primary: Gitarrenunterricht Halle, Gitarrenlehrer Halle
+Secondary: Gitarre lernen Halle, E-Gitarre Unterricht, Akustikgitarre Unterricht
+Local: Halle Saale, Musikunterricht Halle
+Unique: Keine Mindestvertragslaufzeit, Flexible Zeiten
+
+## FEATURES ##
+
+✓ Responsive Design
+✓ Local Business Schema Markup
+✓ FAQ Schema Implementation
+✓ Review Schema Integration
+✓ Performance Optimized
+✓ SEO Optimized
+✓ Accessibility Compliant
+
+## TARGET AUDIENCE ##
+
+Primary: Guitar students in Halle (Saale) and surrounding areas
+Age Groups: Children (6+), Adults, Seniors
+Skill Levels: Beginners to Advanced
+Musical Styles: Pop, Rock, Jazz, Classical
+
+## CONTACT ##
+
+Guitar lessons by appointment
+Flexible scheduling available
+Online lessons via Skype/Zoom
+Location: Central Halle (Saale)
+
+## TECHNOLOGIES USED ##
+
+Frontend: Next.js 15, React 19, TypeScript
+Styling: Tailwind CSS 3
+Icons: Heroicons
+Fonts: Google Fonts
+Analytics: Ready for Google Analytics 4
+Schema: JSON-LD structured data
+SEO: Advanced optimization implemented
+
+This website was built with ❤️ for guitar education in Halle (Saale).

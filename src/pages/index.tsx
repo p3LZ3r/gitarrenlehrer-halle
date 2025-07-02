@@ -5,6 +5,7 @@ import Layout from '@/components/layout/Layout';
 import AboutMe from '@/components/sections/about-me';
 import Contact from '@/components/sections/contact';
 import ExampleLesson from '@/components/sections/example-lesson';
+import FAQ from '@/components/sections/faq';
 import Pricing from '@/components/sections/pricing';
 import Seo from '@/components/Seo';
 
@@ -29,7 +30,12 @@ export default function HomePage() {
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
-      <Seo />
+      <Seo 
+        title="Gitarrenunterricht Halle - Professioneller Gitarrenlehrer Steven Lawrenz | Keine Mindestvertragslaufzeit"
+        description="Professioneller Gitarrenunterricht in Halle (Saale) für Anfänger und Fortgeschrittene. ✓ Keine Mindestvertragslaufzeit ✓ Flexible Zeiten ✓ Alle Altersgruppen ✓ E-Gitarre & Akustikgitarre ✓ 5⭐ Google Bewertungen ✓ Zentrale Lage"
+        keywords="Gitarrenunterricht Halle, Gitarrenlehrer Halle, Gitarre lernen Halle, E-Gitarre Unterricht Halle, Akustikgitarre Unterricht Halle, Steven Lawrenz, Musikunterricht Halle, Gitarrenunterricht Halle Saale, keine Mindestvertragslaufzeit"
+        includeLocalBusiness={true}
+      />
       <main className='mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28'>
         <div className='sm:text-center lg:text-left'>
           <h1 className='text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl'>
@@ -78,6 +84,7 @@ export default function HomePage() {
       <References />
       <Pricing />
       <ExampleLesson />
+      <FAQ />
       <Contact />
     </Layout>
   );

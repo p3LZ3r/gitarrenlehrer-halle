@@ -2,13 +2,14 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import { openGraph } from '@/lib/helper';
+import { faqs } from '@/data/faq';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Gitarrenunterricht Halle - Gitarrenlehrer Steven Lawrenz',
+  title: 'Gitarrenunterricht Halle - Professioneller Gitarrenlehrer Steven Lawrenz | Individueller Unterricht',
   siteName: 'Gitarrenunterricht Halle - Steven Lawrenz',
   description:
-    'Professioneller Gitarrenunterricht in Halle (Saale) für Anfänger und Fortgeschrittene. Individueller Unterricht für E-Gitarre und Akustikgitarre in zentraler Lage. ✓ Flexible Zeiten ✓ Alle Altersgruppen ✓ Moderne Lehrmethoden',
+    'Professioneller Gitarrenunterricht in Halle (Saale) für Anfänger und Fortgeschrittene. Individueller Unterricht für E-Gitarre und Akustikgitarre in zentraler Lage. ✓ Keine Mindestvertragslaufzeit ✓ Flexible Zeiten ✓ Alle Altersgruppen ✓ Moderne Lehrmethoden ✓ 5⭐ Google Bewertungen',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://gitarrenlehrer-halle.de',
   type: 'website',
@@ -16,13 +17,161 @@ const defaultMeta = {
   /** No need to be filled, will be populated with openGraph function */
   image: '',
   keywords:
-    'Gitarrenunterricht Halle, Gitarrenlehrer Halle, Gitarre lernen Halle, E-Gitarre Unterricht Halle, Akustikgitarre Unterricht Halle, Steven Lawrenz, Musikunterricht Halle',
+    'Gitarrenunterricht Halle, Gitarrenlehrer Halle, Gitarre lernen Halle, E-Gitarre Unterricht Halle, Akustikgitarre Unterricht Halle, Steven Lawrenz, Musikunterricht Halle, Gitarrenunterricht Halle Saale, Gitarrenlehrer Halle Zentrum, Musikschule Halle',
 };
 
 type SeoProps = {
   date?: string;
   templateTitle?: string;
+  includeLocalBusiness?: boolean;
 } & Partial<typeof defaultMeta>;
+
+// FAQ Schema
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://gitarrenlehrer-halle.de/#faq',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+
+// Local Business Schema Data
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicSchool',
+  '@id': 'https://gitarrenlehrer-halle.de/#organization',
+  name: 'Gitarrenunterricht Halle - Steven Lawrenz',
+  alternateName: 'Gitarrenlehrer Steven Lawrenz',
+  description: 'Professioneller Gitarrenunterricht in Halle (Saale) für Anfänger und Fortgeschrittene jeden Alters. Individueller Unterricht für E-Gitarre und Akustikgitarre.',
+  url: 'https://gitarrenlehrer-halle.de',
+  telephone: '+4915783024534',
+  email: 'steven.lawrenz@gmx.net',
+  founder: {
+    '@type': 'Person',
+    name: 'Steven Lawrenz',
+    jobTitle: 'Gitarrenlehrer',
+    description: 'Diplom-Musikwissenschaftler und professioneller Gitarrenlehrer mit langjähriger Erfahrung',
+    alumniOf: 'Martin-Luther-Universität Halle-Wittenberg',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Große Gosenstraße 24',
+    addressLocality: 'Halle (Saale)',
+    addressRegion: 'Sachsen-Anhalt',
+    postalCode: '06114',
+    addressCountry: 'DE',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '51.4825',
+    longitude: '11.9706',
+  },
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Halle (Saale)',
+    },
+    {
+      '@type': 'State', 
+      name: 'Sachsen-Anhalt',
+    },
+  ],
+  serviceArea: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: '51.4825',
+      longitude: '11.9706',
+    },
+    geoRadius: '25',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    bestRating: '5',
+    worstRating: '1',
+    ratingCount: '13',
+    reviewCount: '13',
+  },
+  priceRange: '€€',
+  paymentAccepted: ['Cash', 'Bank Transfer'],
+  currenciesAccepted: 'EUR',
+  openingHours: 'Mo-Fr 09:00-20:00, Sa 09:00-16:00',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Gitarrenunterricht Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'E-Gitarre Unterricht',
+          description: 'Professioneller E-Gitarren Unterricht für alle Niveaus',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Akustikgitarre Unterricht',
+          description: 'Akustikgitarren Unterricht für Anfänger und Fortgeschrittene',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Musiktheorie',
+          description: 'Musiktheorie und Gehörbildung für Gitarrenschüler',
+        },
+      },
+    ],
+  },
+  sameAs: [
+    'https://www.google.com/maps/place/Große+Gosenstraße+24,+06114+Halle+(Saale)',
+  ],
+  mainEntityOfPage: 'https://gitarrenlehrer-halle.de',
+  potentialAction: {
+    '@type': 'ReserveAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'mailto:steven.lawrenz@gmx.net',
+    },
+    result: {
+      '@type': 'Reservation',
+      name: 'Gitarrenstunde Buchung',
+    },
+  },
+};
+
+// Website Schema
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://gitarrenlehrer-halle.de/#website',
+  url: 'https://gitarrenlehrer-halle.de',
+  name: 'Gitarrenunterricht Halle - Steven Lawrenz',
+  description: 'Professioneller Gitarrenunterricht in Halle (Saale)',
+  publisher: {
+    '@id': 'https://gitarrenlehrer-halle.de/#organization',
+  },
+  potentialAction: [
+    {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://gitarrenlehrer-halle.de/?s={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  ],
+};
 
 export default function Seo(props: SeoProps) {
   const router = useRouter();
@@ -42,12 +191,29 @@ export default function Seo(props: SeoProps) {
     templateTitle: props.templateTitle,
   });
 
+  const shouldIncludeLocalBusiness = props.includeLocalBusiness !== false;
+
   return (
     <Head>
       <title>{meta.title}</title>
       <meta name='robots' content={meta.robots} />
       <meta content={meta.description} name='description' />
       <meta name='keywords' content={meta.keywords} />
+      
+      {/* Enhanced Local SEO Meta Tags */}
+      <meta name='geo.region' content='DE-ST' />
+      <meta name='geo.placename' content='Halle (Saale)' />
+      <meta name='geo.position' content='51.4825;11.9706' />
+      <meta name='ICBM' content='51.4825, 11.9706' />
+      
+      {/* Business Information */}
+      <meta name='business:contact_data:street_address' content='Große Gosenstraße 24' />
+      <meta name='business:contact_data:locality' content='Halle (Saale)' />
+      <meta name='business:contact_data:postal_code' content='06114' />
+      <meta name='business:contact_data:country_name' content='Deutschland' />
+      <meta name='business:contact_data:phone_number' content='+4915783024534' />
+      <meta name='business:contact_data:email' content='steven.lawrenz@gmx.net' />
+      
       <meta property='og:url' content={`${meta.url}${router.asPath}`} />
       <link rel='canonical' href={`${meta.url}${router.asPath}`} />
       {/* Open Graph */}
@@ -56,12 +222,43 @@ export default function Seo(props: SeoProps) {
       <meta property='og:description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
       <meta name='image' property='og:image' content={meta.image} />
+      <meta property='og:locale' content='de_DE' />
+      
+      {/* Enhanced Open Graph for Local Business */}
+      <meta property='place:location:latitude' content='51.4825' />
+      <meta property='place:location:longitude' content='11.9706' />
+      
       {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:site' content='' />
+      <meta name='twitter:site' content='@gitarrenlehrer' />
       <meta name='twitter:title' content={meta.title} />
       <meta name='twitter:description' content={meta.description} />
       <meta name='twitter:image' content={meta.image} />
+      
+      {/* Structured Data */}
+      {shouldIncludeLocalBusiness && (
+        <>
+          <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(localBusinessSchema),
+            }}
+          />
+          <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(websiteSchema),
+            }}
+          />
+          <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(faqSchema),
+            }}
+          />
+        </>
+      )}
+      
       {meta.date && (
         <>
           <meta property='article:published_time' content={meta.date} />
@@ -73,7 +270,7 @@ export default function Seo(props: SeoProps) {
           <meta
             name='author'
             property='article:author'
-            content='Theodorus Clarence'
+            content='Steven Lawrenz'
           />
         </>
       )}

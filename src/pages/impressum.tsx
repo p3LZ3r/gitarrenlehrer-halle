@@ -7,7 +7,13 @@ import Seo from '@/components/Seo';
 export default function Impressum() {
   return (
     <Layout>
-      <Seo templateTitle='Impressum' />
+      <Seo 
+        templateTitle='Impressum' 
+        title='Impressum - Gitarrenunterricht Halle Steven Lawrenz'
+        description='Impressum und Datenschutzerklärung von Steven Lawrenz, Gitarrenlehrer in Halle (Saale). Kontakt: Große Gosenstraße 24, 06114 Halle.'
+        keywords='Impressum, Steven Lawrenz, Gitarrenlehrer Halle, Kontakt, Datenschutz'
+        includeLocalBusiness={false}
+      />
 
       <main>
         <section className='bg-white'>
