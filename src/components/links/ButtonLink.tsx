@@ -6,17 +6,11 @@ import UnstyledLink, {
   UnstyledLinkProps,
 } from '@/components/links/UnstyledLink';
 
-enum ButtonVariant {
-  'primary',
-  'outline',
-  'ghost',
-  'light',
-  'dark',
-}
+type ButtonVariant = 'primary' | 'outline' | 'ghost' | 'light' | 'dark';
 
 type ButtonLinkProps = {
   isDarkBg?: boolean;
-  variant?: keyof typeof ButtonVariant;
+  variant?: ButtonVariant;
 } & UnstyledLinkProps;
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
