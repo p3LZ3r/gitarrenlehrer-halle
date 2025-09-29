@@ -68,13 +68,13 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings=0",
-      "prettier -w"
-    ],
-    "src/**/*.{json,css,scss,md}": [
-      "prettier -w"
-    ]
-  }
-}
+   "lint-staged": {
+     "src/**/*.{js,jsx,ts,tsx}": [
+       "eslint --max-warnings=0",
+       "prettier -w"
+     ],
+     "src/**/*.{json,css,scss,md}": [
+       "prettier -w"
+     ]
+   }
+ }
