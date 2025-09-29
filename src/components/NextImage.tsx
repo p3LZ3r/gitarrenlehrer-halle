@@ -36,7 +36,7 @@ function NextImage({
   ...rest
 }: NextImageProps) {
   const [status, setStatus] = React.useState(
-    useSkeleton ? 'loading' : 'complete'
+    useSkeleton ? 'loading' : 'complete',
   );
   const widthIsSet = className?.includes('w-') ?? false;
 
@@ -48,13 +48,13 @@ function NextImage({
       <Image
         className={clsxm(
           imgClassName,
-          status === 'loading' && clsxm('animate-pulse', blurClassName)
+          status === 'loading' && clsxm('animate-pulse', blurClassName),
         )}
         src={src}
         width={width}
         height={height}
         alt={alt}
-        onLoadingComplete={() => setStatus('complete')}
+        onLoad={() => setStatus('complete')}
         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         loading={priority ? 'eager' : 'lazy'}
         quality={quality}

@@ -14,7 +14,7 @@ export default function Pricing() {
   return (
     <section className='bg-gray-100' id='preise'>
       <div className='mx-auto max-w-7xl md:grid md:grid-cols-2 md:px-6 lg:px-8'>
-        <div className='px-4 pt-12 sm:px-6 sm:text-right md:flex md:flex-col md:pt-16 md:pl-0 md:pr-10 lg:pr-16'>
+        <div className='px-4 pt-12 sm:px-6 sm:text-right md:flex md:flex-col md:pl-0 md:pr-10 md:pt-16 lg:pr-16'>
           <h2 className='text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl lg:text-5xl'>
             Preise
           </h2>
@@ -24,7 +24,7 @@ export default function Pricing() {
             besprechen.
           </p>
         </div>
-        <div className='z-20 px-4 pt-12 sm:px-6 md:pt-16 md:pr-0 md:pl-10 lg:pl-16'>
+        <div className='z-20 px-4 pt-12 sm:px-6 md:pl-10 md:pr-0 md:pt-16 lg:pl-16'>
           {' '}
           <NextImage
             useSkeleton
@@ -70,8 +70,8 @@ export default function Pricing() {
                   </ul>
                 </div>
               </div>
-              <div className='bg-gray-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-9'>
-                <p className='absolute top-0 -translate-y-1/2 transform rounded-full bg-primary-500 py-1.5 px-4 text-xs font-semibold uppercase tracking-wide text-white lg:left-3/4'>
+              <div className='bg-gray-100 px-6 py-8 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-9'>
+                <p className='absolute top-0 -translate-y-1/2 transform rounded-full bg-primary-500 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white lg:left-3/4'>
                   Keine Mindestvertragsdauer
                 </p>
                 <p className='text-lg font-medium leading-6 text-gray-900'>
@@ -103,7 +103,7 @@ export default function Pricing() {
                     <a
                       target='_blank'
                       href='mailto:steven.lawrenz@gmx.net'
-                      className='flex w-full items-center justify-center rounded-md border border-transparent bg-primary-600 px-8 py-3 text-base font-medium text-white hover:bg-primary-700 md:py-4 md:px-10 md:text-lg'
+                      className='flex w-full items-center justify-center rounded-md border border-transparent bg-primary-600 px-8 py-3 text-base font-medium text-white hover:bg-primary-700 md:px-10 md:py-4 md:text-lg'
                       rel='noreferrer'
                     >
                       Jetzt unverbindlich anfragen

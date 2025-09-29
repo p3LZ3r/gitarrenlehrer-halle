@@ -2,6 +2,9 @@
   "name": "ts-nextjs-tailwind-starter",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=16.14.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,7 +20,7 @@
     "release": "standard-version",
     "push-release": "git push --follow-tags origin main",
     "postbuild": "next-sitemap",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",

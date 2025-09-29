@@ -26,11 +26,11 @@ export default function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className='rounded-lg bg-white shadow-sm border border-gray-200'
+                className='group rounded-lg border border-gray-200 bg-white shadow-sm focus-within:ring-2 focus-within:ring-primary-500 focus-within:ring-offset-2'
               >
                 <dt>
                   <button
-                    className='flex w-full items-start justify-between px-6 py-4 text-left text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2'
+                    className='flex w-full items-start justify-between px-6 py-4 text-left text-gray-900 focus:outline-none'
                     onClick={() => toggleFAQ(index)}
                     aria-expanded={openIndex === index}
                   >
@@ -62,12 +62,12 @@ export default function FAQ() {
               </div>
             ))}
           </dl>
-          
+
           <div className='mt-12 text-center'>
-            <p className='text-lg text-gray-600 mb-6'>
+            <p className='mb-6 text-lg text-gray-600'>
               Haben Sie weitere Fragen? Kontaktieren Sie mich gerne!
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col justify-center gap-4 sm:flex-row'>
               <a
                 href='tel:+4915783024534'
                 className='inline-flex items-center justify-center rounded-md border border-transparent bg-primary-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2'

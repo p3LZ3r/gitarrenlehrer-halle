@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import { openGraph } from '@/lib/helper';
 import { faqs } from '@/data/faq';
+import { openGraph } from '@/lib/helper';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Gitarrenunterricht Halle - Professioneller Gitarrenlehrer Steven Lawrenz | Individueller Unterricht',
+  title:
+    'Gitarrenunterricht Halle - Professioneller Gitarrenlehrer Steven Lawrenz | Individueller Unterricht',
   siteName: 'Gitarrenunterricht Halle - Steven Lawrenz',
   description:
     'Professioneller Gitarrenunterricht in Halle (Saale) für Anfänger und Fortgeschrittene. Individueller Unterricht für E-Gitarre und Akustikgitarre in zentraler Lage. ✓ Keine Mindestvertragslaufzeit ✓ Flexible Zeiten ✓ Alle Altersgruppen ✓ Moderne Lehrmethoden ✓ 5⭐ Google Bewertungen',
@@ -48,7 +49,8 @@ const localBusinessSchema = {
   '@id': 'https://gitarrenlehrer-halle.de/#organization',
   name: 'Gitarrenunterricht Halle - Steven Lawrenz',
   alternateName: 'Gitarrenlehrer Steven Lawrenz',
-  description: 'Professioneller Gitarrenunterricht in Halle (Saale) für Anfänger und Fortgeschrittene jeden Alters. Individueller Unterricht für E-Gitarre und Akustikgitarre.',
+  description:
+    'Professioneller Gitarrenunterricht in Halle (Saale) für Anfänger und Fortgeschrittene jeden Alters. Individueller Unterricht für E-Gitarre und Akustikgitarre.',
   url: 'https://gitarrenlehrer-halle.de',
   telephone: '+4915783024534',
   email: 'steven.lawrenz@gmx.net',
@@ -56,7 +58,8 @@ const localBusinessSchema = {
     '@type': 'Person',
     name: 'Steven Lawrenz',
     jobTitle: 'Gitarrenlehrer',
-    description: 'Diplom-Musikwissenschaftler und professioneller Gitarrenlehrer mit langjähriger Erfahrung',
+    description:
+      'Diplom-Musikwissenschaftler und professioneller Gitarrenlehrer mit langjähriger Erfahrung',
     alumniOf: 'Martin-Luther-Universität Halle-Wittenberg',
   },
   address: {
@@ -78,7 +81,7 @@ const localBusinessSchema = {
       name: 'Halle (Saale)',
     },
     {
-      '@type': 'State', 
+      '@type': 'State',
       name: 'Sachsen-Anhalt',
     },
   ],
@@ -120,7 +123,8 @@ const localBusinessSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Akustikgitarre Unterricht',
-          description: 'Akustikgitarren Unterricht für Anfänger und Fortgeschrittene',
+          description:
+            'Akustikgitarren Unterricht für Anfänger und Fortgeschrittene',
         },
       },
       {
@@ -199,21 +203,30 @@ export default function Seo(props: SeoProps) {
       <meta name='robots' content={meta.robots} />
       <meta content={meta.description} name='description' />
       <meta name='keywords' content={meta.keywords} />
-      
+
       {/* Enhanced Local SEO Meta Tags */}
       <meta name='geo.region' content='DE-ST' />
       <meta name='geo.placename' content='Halle (Saale)' />
       <meta name='geo.position' content='51.4825;11.9706' />
       <meta name='ICBM' content='51.4825, 11.9706' />
-      
+
       {/* Business Information */}
-      <meta name='business:contact_data:street_address' content='Große Gosenstraße 24' />
+      <meta
+        name='business:contact_data:street_address'
+        content='Große Gosenstraße 24'
+      />
       <meta name='business:contact_data:locality' content='Halle (Saale)' />
       <meta name='business:contact_data:postal_code' content='06114' />
       <meta name='business:contact_data:country_name' content='Deutschland' />
-      <meta name='business:contact_data:phone_number' content='+4915783024534' />
-      <meta name='business:contact_data:email' content='steven.lawrenz@gmx.net' />
-      
+      <meta
+        name='business:contact_data:phone_number'
+        content='+4915783024534'
+      />
+      <meta
+        name='business:contact_data:email'
+        content='steven.lawrenz@gmx.net'
+      />
+
       <meta property='og:url' content={`${meta.url}${router.asPath}`} />
       <link rel='canonical' href={`${meta.url}${router.asPath}`} />
       {/* Open Graph */}
@@ -223,18 +236,18 @@ export default function Seo(props: SeoProps) {
       <meta property='og:title' content={meta.title} />
       <meta name='image' property='og:image' content={meta.image} />
       <meta property='og:locale' content='de_DE' />
-      
+
       {/* Enhanced Open Graph for Local Business */}
       <meta property='place:location:latitude' content='51.4825' />
       <meta property='place:location:longitude' content='11.9706' />
-      
+
       {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@gitarrenlehrer' />
       <meta name='twitter:title' content={meta.title} />
       <meta name='twitter:description' content={meta.description} />
       <meta name='twitter:image' content={meta.image} />
-      
+
       {/* Structured Data */}
       {shouldIncludeLocalBusiness && (
         <>
@@ -258,7 +271,7 @@ export default function Seo(props: SeoProps) {
           />
         </>
       )}
-      
+
       {meta.date && (
         <>
           <meta property='article:published_time' content={meta.date} />
