@@ -4,16 +4,17 @@ module.exports = {
   eslint: {
     dirs: ['src'],
   },
-   images: {
-     remotePatterns: [
-       {
-         protocol: 'https',
-         hostname: 'images.unsplash.com',
-       },
-     ],
-     formats: ['image/avif', 'image/webp'],
-     minimumCacheTTL: 60,
-   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
+    qualities: [75, 85],
+  },
 
   reactStrictMode: true,
 
